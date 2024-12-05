@@ -31,7 +31,6 @@
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            btnRegister = new components.ButtonComponent2();
             btnLogin = new components.ButtonComponent1();
             txtPassword = new TextBox();
             label3 = new Label();
@@ -73,7 +72,6 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(btnRegister);
             panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(txtPassword);
             panel1.Controls.Add(label3);
@@ -86,27 +84,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1394, 794);
             panel1.TabIndex = 0;
-            // 
-            // btnRegister
-            // 
-            btnRegister.BackColor = Color.FromArgb(126, 96, 191);
-            btnRegister.BackgroundColor = Color.FromArgb(126, 96, 191);
-            btnRegister.BorderColor = Color.PaleVioletRed;
-            btnRegister.BorderRadius = 10;
-            btnRegister.BorderSize = 0;
-            btnRegister.FlatAppearance.BorderSize = 0;
-            btnRegister.FlatStyle = FlatStyle.Flat;
-            btnRegister.Font = new Font("Segoe UI Semibold", 12F);
-            btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(814, 472);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Padding = new Padding(15, 8, 15, 8);
-            btnRegister.Size = new Size(132, 50);
-            btnRegister.TabIndex = 11;
-            btnRegister.Text = "Sign up";
-            btnRegister.TextColor = Color.White;
-            btnRegister.UseVisualStyleBackColor = false;
-            btnRegister.Click += btnRegister_Click;
             // 
             // btnLogin
             // 
@@ -210,7 +187,6 @@
         private Button button3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Panel panel1;
-        private components.ButtonComponent2 btnRegister;
         private components.ButtonComponent1 btnLogin;
         private TextBox txtPassword;
         private Label label3;

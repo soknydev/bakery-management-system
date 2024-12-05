@@ -1,6 +1,7 @@
 ﻿using bakery_management_system.Controllers;
 using bakery_management_system.Models;
 using bakery_management_system.Utils;
+using bakery_management_system.Views.admin;
 
 namespace bakery_management_system.Views
 {
@@ -28,8 +29,17 @@ namespace bakery_management_system.Views
                 // Store the logged-in user in the session
                 UserSession.CurrentUser = employee;
 
-                // Navigate to Dashboard
-                DashboardForm dashboardForm = new DashboardForm();
+                // Navigate based on the user's role
+                Form dashboardForm;
+                if (employee.Role.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                {
+                    dashboardForm = new DashboardAdminForm();
+                }
+                else
+                {
+                    dashboardForm = new DashboardForm();
+                }
+
                 dashboardForm.Show();
                 this.Hide();
             }
@@ -39,14 +49,11 @@ namespace bakery_management_system.Views
             }
         }
 
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();
             registerForm.ShowDialog();
             this.Hide();
         }
-
-
     }
 }
