@@ -51,6 +51,7 @@
             panel1 = new Panel();
             panel3 = new Panel();
             logoutButton1 = new components.LogoutButton();
+            flpInvoices = new FlowLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
@@ -86,6 +87,7 @@
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Controls.Add(flpInvoices, 0, 1);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(223, 3);
@@ -406,6 +408,16 @@
             logoutButton1.TextColor = Color.White;
             logoutButton1.UseVisualStyleBackColor = false;
             // 
+            // flpInvoices
+            // 
+            flpInvoices.AutoScroll = true;
+            flpInvoices.Dock = DockStyle.Fill;
+            flpInvoices.Location = new Point(30, 115);
+            flpInvoices.Margin = new Padding(30);
+            flpInvoices.Name = "flpInvoices";
+            flpInvoices.Size = new Size(1207, 689);
+            flpInvoices.TabIndex = 1;
+            // 
             // PaymentAdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -455,5 +467,6 @@
         private Panel panel1;
         private Panel panel3;
         private components.LogoutButton logoutButton1;
+        private FlowLayoutPanel flpInvoices;
     }
 }
