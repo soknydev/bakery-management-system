@@ -30,7 +30,6 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            btnLogin = new components.ButtonComponent2();
             btnRegister = new components.ButtonComponent1();
             txtSalary = new TextBox();
             txtGmail = new TextBox();
@@ -78,7 +77,6 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(btnRegister);
             panel1.Controls.Add(txtSalary);
             panel1.Controls.Add(txtGmail);
@@ -105,27 +103,6 @@
             panel1.Size = new Size(1494, 794);
             panel1.TabIndex = 0;
             // 
-            // btnLogin
-            // 
-            btnLogin.BackColor = Color.FromArgb(126, 96, 191);
-            btnLogin.BackgroundColor = Color.FromArgb(126, 96, 191);
-            btnLogin.BorderColor = Color.PaleVioletRed;
-            btnLogin.BorderRadius = 10;
-            btnLogin.BorderSize = 0;
-            btnLogin.FlatAppearance.BorderSize = 0;
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Segoe UI Semibold", 12F);
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(750, 658);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Padding = new Padding(15, 8, 15, 8);
-            btnLogin.Size = new Size(134, 50);
-            btnLogin.TabIndex = 27;
-            btnLogin.Text = "Log in";
-            btnLogin.TextColor = Color.White;
-            btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += btnLogin_Click;
-            // 
             // btnRegister
             // 
             btnRegister.BackColor = Color.FromArgb(255, 101, 0);
@@ -142,7 +119,7 @@
             btnRegister.Padding = new Padding(15, 8, 15, 8);
             btnRegister.Size = new Size(134, 50);
             btnRegister.TabIndex = 26;
-            btnRegister.Text = "Sign up";
+            btnRegister.Text = "Add";
             btnRegister.TextColor = Color.White;
             btnRegister.UseVisualStyleBackColor = false;
             btnRegister.Click += btnRegister_Click;
@@ -309,11 +286,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(255, 101, 0);
-            label1.Location = new Point(925, 65);
+            label1.Location = new Point(613, 42);
             label1.Name = "label1";
-            label1.Size = new Size(159, 50);
+            label1.Size = new Size(392, 50);
             label1.TabIndex = 1;
-            label1.Text = "Register";
+            label1.Text = "Create New Employee";
             // 
             // pictureBox1
             // 
@@ -367,7 +344,6 @@
         private DateTimePicker dtpTimePicker;
         private TextBox txtSalary;
         private TextBox txtGmail;
-        private components.ButtonComponent2 btnLogin;
         private components.ButtonComponent1 btnRegister;
     }
 }

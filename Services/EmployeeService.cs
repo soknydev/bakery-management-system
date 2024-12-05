@@ -6,6 +6,41 @@ namespace bakery_management_system.Services
 {
     public class EmployeeService
     {
+        public List<Employee> GetAllEmployees()
+        {
+            var employees = new List<Employee>();
+
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT * FROM Employees";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            employees.Add(new Employee
+                            {
+                                EmployeeId = Convert.ToInt32(reader["employee_id"]),
+                                Name = reader["name"].ToString(),
+                                Role = reader["role"].ToString(),
+                                Email = reader["email"].ToString(),
+                                Phone = reader["phone"].ToString(),
+                                Salary = Convert.ToDecimal(reader["salary"]),
+                                HireDate = Convert.ToDateTime(reader["hire_date"]),
+                                Username = reader["username"].ToString(),
+                                ImagePath = reader["image_path"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+
+            return employees;
+        }
+
 
         // handle user login
         public Employee AuthenticateUser(string username, string password)

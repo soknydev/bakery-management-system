@@ -16,8 +16,6 @@ namespace bakery_management_system.Views.admin
             _customerController = new CustomerController();
 
             LoadCustomers();
-            CustomerAdminForm customerAdminForm = new CustomerAdminForm();
-            customerAdminForm.Show();
         }
 
         private void LoadCustomers()

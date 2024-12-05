@@ -91,7 +91,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = SystemColors.ButtonFace;
             Controls.Add(btnUpdate);
             Controls.Add(lblAddress);
             Controls.Add(lblEmail);

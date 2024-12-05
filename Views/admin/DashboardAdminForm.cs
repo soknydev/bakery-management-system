@@ -115,5 +115,14 @@ namespace bakery_management_system.Views.admin
             customerAdminForm.Show();
             this.Hide();
         }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            EmployeeAdminForm employeeAdminForm = new EmployeeAdminForm();
+            employeeAdminForm.Show();
+            this.Hide();
+        }
+
+
     }
 }

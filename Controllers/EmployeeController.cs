@@ -12,6 +12,10 @@ namespace bakery_management_system.Controllers
             _employeeService = new EmployeeService();
         }
 
+        public List<Employee> GetEmployees()
+        {
+            return _employeeService.GetAllEmployees();
+        }
 
         // handle user login
         public Employee Login(string username, string password)

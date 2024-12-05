@@ -160,6 +160,7 @@
             btnEmployees.TextAlign = ContentAlignment.MiddleLeft;
             btnEmployees.TextColor = Color.Black;
             btnEmployees.UseVisualStyleBackColor = false;
+            btnEmployees.Click += btnEmployees_Click;
             // 
             // btnCustomers
             // 
