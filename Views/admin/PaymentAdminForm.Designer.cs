@@ -30,6 +30,7 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel3 = new TableLayoutPanel();
+            flpInvoices = new FlowLayoutPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
             panel6 = new Panel();
             lblWelcome = new Label();
@@ -51,7 +52,6 @@
             panel1 = new Panel();
             panel3 = new Panel();
             logoutButton1 = new components.LogoutButton();
-            flpInvoices = new FlowLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
@@ -97,6 +97,16 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle());
             tableLayoutPanel3.Size = new Size(1215, 767);
             tableLayoutPanel3.TabIndex = 2;
+            // 
+            // flpInvoices
+            // 
+            flpInvoices.AutoScroll = true;
+            flpInvoices.Dock = DockStyle.Fill;
+            flpInvoices.Location = new Point(30, 115);
+            flpInvoices.Margin = new Padding(30);
+            flpInvoices.Name = "flpInvoices";
+            flpInvoices.Size = new Size(1207, 689);
+            flpInvoices.TabIndex = 1;
             // 
             // tableLayoutPanel4
             // 
@@ -254,6 +264,7 @@
             btnEmployees.TextAlign = ContentAlignment.MiddleLeft;
             btnEmployees.TextColor = Color.Black;
             btnEmployees.UseVisualStyleBackColor = false;
+            btnEmployees.Click += btnEmployees_Click;
             // 
             // btnCustomers
             // 
@@ -275,6 +286,7 @@
             btnCustomers.TextAlign = ContentAlignment.MiddleLeft;
             btnCustomers.TextColor = Color.Black;
             btnCustomers.UseVisualStyleBackColor = false;
+            btnCustomers.Click += btnCustomers_Click;
             // 
             // btnMyOrders
             // 
@@ -296,6 +308,7 @@
             btnMyOrders.TextAlign = ContentAlignment.MiddleLeft;
             btnMyOrders.TextColor = Color.Black;
             btnMyOrders.UseVisualStyleBackColor = false;
+            btnMyOrders.Click += btnMyOrders_Click_1;
             // 
             // btnPayments
             // 
@@ -338,6 +351,7 @@
             btnCategories.TextAlign = ContentAlignment.MiddleLeft;
             btnCategories.TextColor = Color.Black;
             btnCategories.UseVisualStyleBackColor = false;
+            btnCategories.Click += btnCategory_Click;
             // 
             // btnProdcuts
             // 
@@ -359,6 +373,7 @@
             btnProdcuts.TextAlign = ContentAlignment.MiddleLeft;
             btnProdcuts.TextColor = Color.Black;
             btnProdcuts.UseVisualStyleBackColor = false;
+            btnProdcuts.Click += btnProducts_Click;
             // 
             // pbLogo
             // 
@@ -407,16 +422,7 @@
             logoutButton1.Text = "Logout";
             logoutButton1.TextColor = Color.White;
             logoutButton1.UseVisualStyleBackColor = false;
-            // 
-            // flpInvoices
-            // 
-            flpInvoices.AutoScroll = true;
-            flpInvoices.Dock = DockStyle.Fill;
-            flpInvoices.Location = new Point(30, 115);
-            flpInvoices.Margin = new Padding(30);
-            flpInvoices.Name = "flpInvoices";
-            flpInvoices.Size = new Size(1207, 689);
-            flpInvoices.TabIndex = 1;
+            logoutButton1.Click += logoutButton1_Click;
             // 
             // PaymentAdminForm
             // 

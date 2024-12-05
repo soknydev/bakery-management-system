@@ -34,6 +34,7 @@
             panel9 = new Panel();
             tableLayoutPanel6 = new TableLayoutPanel();
             flowLayoutPanelEmployees = new FlowLayoutPanel();
+            cartEmployeeControl1 = new components.userControl.CartEmployeeControl();
             panel11 = new Panel();
             btnAddEmployee = new components.ButtonComponent1();
             tableLayoutPanel4 = new TableLayoutPanel();
@@ -57,7 +58,6 @@
             panel1 = new Panel();
             panel3 = new Panel();
             logoutButton1 = new components.LogoutButton();
-            cartEmployeeControl1 = new components.userControl.CartEmployeeControl();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
@@ -161,6 +161,14 @@
             flowLayoutPanelEmployees.Name = "flowLayoutPanelEmployees";
             flowLayoutPanelEmployees.Size = new Size(1394, 567);
             flowLayoutPanelEmployees.TabIndex = 1;
+            // 
+            // cartEmployeeControl1
+            // 
+            cartEmployeeControl1.BackColor = Color.Gainsboro;
+            cartEmployeeControl1.Location = new Point(3, 3);
+            cartEmployeeControl1.Name = "cartEmployeeControl1";
+            cartEmployeeControl1.Size = new Size(1388, 59);
+            cartEmployeeControl1.TabIndex = 2;
             // 
             // panel11
             // 
@@ -348,6 +356,7 @@
             btnCustomers.TextAlign = ContentAlignment.MiddleLeft;
             btnCustomers.TextColor = Color.Black;
             btnCustomers.UseVisualStyleBackColor = false;
+            btnCustomers.Click += btnCustomers_Click;
             // 
             // btnPayments
             // 
@@ -369,6 +378,7 @@
             btnPayments.TextAlign = ContentAlignment.MiddleLeft;
             btnPayments.TextColor = Color.Black;
             btnPayments.UseVisualStyleBackColor = false;
+            btnPayments.Click += btnMyPayments_Click;
             // 
             // btnMyOrders
             // 
@@ -390,6 +400,7 @@
             btnMyOrders.TextAlign = ContentAlignment.MiddleLeft;
             btnMyOrders.TextColor = Color.Black;
             btnMyOrders.UseVisualStyleBackColor = false;
+            btnMyOrders.Click += btnMyOrders_Click_1;
             // 
             // btnEmployees
             // 
@@ -432,6 +443,7 @@
             btnCategories.TextAlign = ContentAlignment.MiddleLeft;
             btnCategories.TextColor = Color.Black;
             btnCategories.UseVisualStyleBackColor = false;
+            btnCategories.Click += btnCaetegory_Click;
             // 
             // btnProdcuts
             // 
@@ -453,6 +465,7 @@
             btnProdcuts.TextAlign = ContentAlignment.MiddleLeft;
             btnProdcuts.TextColor = Color.Black;
             btnProdcuts.UseVisualStyleBackColor = false;
+            btnProdcuts.Click += btnProducts_Click;
             // 
             // pbLogo
             // 
@@ -501,14 +514,7 @@
             logoutButton1.Text = "Logout";
             logoutButton1.TextColor = Color.White;
             logoutButton1.UseVisualStyleBackColor = false;
-            // 
-            // cartEmployeeControl1
-            // 
-            cartEmployeeControl1.BackColor = Color.Gainsboro;
-            cartEmployeeControl1.Location = new Point(3, 3);
-            cartEmployeeControl1.Name = "cartEmployeeControl1";
-            cartEmployeeControl1.Size = new Size(1388, 59);
-            cartEmployeeControl1.TabIndex = 2;
+            logoutButton1.Click += logoutButton1_Click;
             // 
             // EmployeeAdminForm
             // 

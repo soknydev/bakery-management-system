@@ -431,6 +431,7 @@
             btnEmployees.TextAlign = ContentAlignment.MiddleLeft;
             btnEmployees.TextColor = Color.Black;
             btnEmployees.UseVisualStyleBackColor = false;
+            btnEmployees.Click += btnEmployees_Click;
             // 
             // btnPayments
             // 
@@ -452,6 +453,7 @@
             btnPayments.TextAlign = ContentAlignment.MiddleLeft;
             btnPayments.TextColor = Color.Black;
             btnPayments.UseVisualStyleBackColor = false;
+            btnPayments.Click += btnMyPayments_Click;
             // 
             // btnMyOrders
             // 
@@ -473,6 +475,7 @@
             btnMyOrders.TextAlign = ContentAlignment.MiddleLeft;
             btnMyOrders.TextColor = Color.Black;
             btnMyOrders.UseVisualStyleBackColor = false;
+            btnMyOrders.Click += btnMyOrders_Click_1;
             // 
             // btnCustomers
             // 
@@ -515,6 +518,7 @@
             btnCategories.TextAlign = ContentAlignment.MiddleLeft;
             btnCategories.TextColor = Color.Black;
             btnCategories.UseVisualStyleBackColor = false;
+            btnCategories.Click += btnCategory_Click;
             // 
             // btnProdcuts
             // 
@@ -536,6 +540,7 @@
             btnProdcuts.TextAlign = ContentAlignment.MiddleLeft;
             btnProdcuts.TextColor = Color.Black;
             btnProdcuts.UseVisualStyleBackColor = false;
+            btnProdcuts.Click += btnProducts_Click;
             // 
             // pbLogo
             // 
@@ -584,6 +589,7 @@
             logoutButton1.Text = "Logout";
             logoutButton1.TextColor = Color.White;
             logoutButton1.UseVisualStyleBackColor = false;
+            logoutButton1.Click += logoutButton1_Click;
             // 
             // CustomerAdminForm
             // 

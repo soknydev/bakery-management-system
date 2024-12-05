@@ -129,5 +129,29 @@ namespace bakery_management_system.Views.admin
             addProductsForm.Show();
 
         }
+
+        private void logoutButton1_Click(object sender, EventArgs e)
+        {
+            // Confirm logout action
+            var confirmLogout = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (confirmLogout == DialogResult.Yes)
+            {
+                // Clear user session or any logged-in state
+                UserSession.CurrentUser = null;
+
+                // Navigate to the LoginForm
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
+
+                // Close the current form
+                this.Close();
+            }
+        }
     }
 }

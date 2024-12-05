@@ -320,6 +320,7 @@
             logoutButton1.Text = "Logout";
             logoutButton1.TextColor = Color.White;
             logoutButton1.UseVisualStyleBackColor = false;
+            logoutButton1.Click += logoutButton1_Click;
             // 
             // tableLayoutPanel3
             // 
