@@ -29,10 +29,17 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            flowLayoutPanelCategories = new FlowLayoutPanel();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            panel6 = new Panel();
+            lblWelcome = new Label();
+            btnSearch = new Button();
+            txtSearch = new TextBox();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            pbProfile = new components.PictureBoxComponent1();
             tableLayoutPanel2 = new TableLayoutPanel();
-            panel1 = new Panel();
-            panel3 = new Panel();
-            logoutButton1 = new components.LogoutButton();
             panel2 = new Panel();
             btnReports = new components.ButtonSidebar1();
             btnEmployees = new components.ButtonSidebar1();
@@ -42,27 +49,21 @@
             btnMyPayments = new components.ButtonSidebar1();
             btnProdcuts = new components.ButtonSidebar1();
             pbLogo = new PictureBox();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            panel6 = new Panel();
-            lblWelcome = new Label();
-            btnSearch = new Button();
-            txtSearch = new TextBox();
-            panel4 = new Panel();
-            panel5 = new Panel();
-            pbProfile = new components.PictureBoxComponent1();
+            panel1 = new Panel();
+            panel3 = new Panel();
+            logoutButton1 = new components.LogoutButton();
             tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
+            tableLayoutPanel2.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
+            panel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -81,6 +82,114 @@
             tableLayoutPanel1.Size = new Size(1458, 744);
             tableLayoutPanel1.TabIndex = 0;
             // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Controls.Add(flowLayoutPanelCategories, 0, 1);
+            tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
+            tableLayoutPanel3.Dock = DockStyle.Fill;
+            tableLayoutPanel3.Location = new Point(223, 3);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 85F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle());
+            tableLayoutPanel3.Size = new Size(1232, 766);
+            tableLayoutPanel3.TabIndex = 2;
+            // 
+            // flowLayoutPanelCategories
+            // 
+            flowLayoutPanelCategories.AutoScroll = true;
+            flowLayoutPanelCategories.Dock = DockStyle.Fill;
+            flowLayoutPanelCategories.Location = new Point(3, 88);
+            flowLayoutPanelCategories.Name = "flowLayoutPanelCategories";
+            flowLayoutPanelCategories.Size = new Size(1261, 675);
+            flowLayoutPanelCategories.TabIndex = 1;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150F));
+            tableLayoutPanel4.Controls.Add(panel6, 0, 0);
+            tableLayoutPanel4.Controls.Add(panel4, 1, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(3, 3);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle());
+            tableLayoutPanel4.Size = new Size(1261, 79);
+            tableLayoutPanel4.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(lblWelcome);
+            panel6.Controls.Add(btnSearch);
+            panel6.Controls.Add(txtSearch);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(3, 3);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1105, 76);
+            panel6.TabIndex = 2;
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Segoe UI", 14F);
+            lblWelcome.ForeColor = Color.FromArgb(255, 101, 0);
+            lblWelcome.Location = new Point(24, 19);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(78, 32);
+            lblWelcome.TabIndex = 3;
+            lblWelcome.Text = "label1";
+            // 
+            // btnSearch
+            // 
+            btnSearch.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSearch.Location = new Point(665, 17);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(103, 42);
+            btnSearch.TabIndex = 1;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Font = new Font("Segoe UI", 14F);
+            txtSearch.Location = new Point(318, 19);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(321, 39);
+            txtSearch.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(panel5);
+            panel4.Location = new Point(1114, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(144, 76);
+            panel4.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(pbProfile);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(144, 76);
+            panel5.TabIndex = 1;
+            // 
+            // pbProfile
+            // 
+            pbProfile.BackColor = Color.Transparent;
+            pbProfile.Image = Properties.Resources.photo_2023_08_01_20_25_42;
+            pbProfile.Location = new Point(40, 5);
+            pbProfile.Name = "pbProfile";
+            pbProfile.Size = new Size(65, 65);
+            pbProfile.TabIndex = 0;
+            pbProfile.TabStop = false;
+            // 
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.ColumnCount = 1;
@@ -96,44 +205,6 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 150F));
             tableLayoutPanel2.Size = new Size(214, 766);
             tableLayoutPanel2.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(panel3);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 619);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(208, 144);
-            panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(logoutButton1);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(208, 144);
-            panel3.TabIndex = 3;
-            // 
-            // logoutButton1
-            // 
-            logoutButton1.BackColor = Color.FromArgb(250, 64, 50);
-            logoutButton1.BackgroundColor = Color.FromArgb(250, 64, 50);
-            logoutButton1.BorderColor = Color.PaleVioletRed;
-            logoutButton1.BorderRadius = 10;
-            logoutButton1.BorderSize = 0;
-            logoutButton1.FlatAppearance.BorderSize = 0;
-            logoutButton1.FlatStyle = FlatStyle.Flat;
-            logoutButton1.Font = new Font("Segoe UI Semibold", 12F);
-            logoutButton1.ForeColor = Color.White;
-            logoutButton1.Location = new Point(39, 0);
-            logoutButton1.Name = "logoutButton1";
-            logoutButton1.Padding = new Padding(15, 8, 15, 8);
-            logoutButton1.Size = new Size(129, 51);
-            logoutButton1.TabIndex = 1;
-            logoutButton1.Text = "Logout";
-            logoutButton1.TextColor = Color.White;
-            logoutButton1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -309,102 +380,43 @@
             pbLogo.TabIndex = 0;
             pbLogo.TabStop = false;
             // 
-            // tableLayoutPanel3
+            // panel1
             // 
-            tableLayoutPanel3.ColumnCount = 1;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
-            tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(223, 3);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 85F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            tableLayoutPanel3.Size = new Size(1232, 766);
-            tableLayoutPanel3.TabIndex = 2;
+            panel1.Controls.Add(panel3);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(3, 619);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(208, 144);
+            panel1.TabIndex = 0;
             // 
-            // tableLayoutPanel4
+            // panel3
             // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150F));
-            tableLayoutPanel4.Controls.Add(panel6, 0, 0);
-            tableLayoutPanel4.Controls.Add(panel4, 1, 0);
-            tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(3, 3);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle());
-            tableLayoutPanel4.Size = new Size(1261, 79);
-            tableLayoutPanel4.TabIndex = 0;
+            panel3.Controls.Add(logoutButton1);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(208, 144);
+            panel3.TabIndex = 3;
             // 
-            // panel6
+            // logoutButton1
             // 
-            panel6.Controls.Add(lblWelcome);
-            panel6.Controls.Add(btnSearch);
-            panel6.Controls.Add(txtSearch);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(3, 3);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1105, 76);
-            panel6.TabIndex = 2;
-            // 
-            // lblWelcome
-            // 
-            lblWelcome.AutoSize = true;
-            lblWelcome.Font = new Font("Segoe UI", 14F);
-            lblWelcome.ForeColor = Color.FromArgb(255, 101, 0);
-            lblWelcome.Location = new Point(24, 19);
-            lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(78, 32);
-            lblWelcome.TabIndex = 3;
-            lblWelcome.Text = "label1";
-            // 
-            // btnSearch
-            // 
-            btnSearch.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSearch.Location = new Point(665, 17);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(103, 42);
-            btnSearch.TabIndex = 1;
-            btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // txtSearch
-            // 
-            txtSearch.Font = new Font("Segoe UI", 14F);
-            txtSearch.Location = new Point(318, 19);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(321, 39);
-            txtSearch.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(panel5);
-            panel4.Location = new Point(1114, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(144, 76);
-            panel4.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(pbProfile);
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(0, 0);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(144, 76);
-            panel5.TabIndex = 1;
-            // 
-            // pbProfile
-            // 
-            pbProfile.BackColor = Color.Transparent;
-            pbProfile.Image = Properties.Resources.photo_2023_08_01_20_25_42;
-            pbProfile.Location = new Point(40, 5);
-            pbProfile.Name = "pbProfile";
-            pbProfile.Size = new Size(65, 65);
-            pbProfile.TabIndex = 0;
-            pbProfile.TabStop = false;
+            logoutButton1.BackColor = Color.FromArgb(250, 64, 50);
+            logoutButton1.BackgroundColor = Color.FromArgb(250, 64, 50);
+            logoutButton1.BorderColor = Color.PaleVioletRed;
+            logoutButton1.BorderRadius = 10;
+            logoutButton1.BorderSize = 0;
+            logoutButton1.FlatAppearance.BorderSize = 0;
+            logoutButton1.FlatStyle = FlatStyle.Flat;
+            logoutButton1.Font = new Font("Segoe UI Semibold", 12F);
+            logoutButton1.ForeColor = Color.White;
+            logoutButton1.Location = new Point(39, 0);
+            logoutButton1.Name = "logoutButton1";
+            logoutButton1.Padding = new Padding(15, 8, 15, 8);
+            logoutButton1.Size = new Size(129, 51);
+            logoutButton1.TabIndex = 1;
+            logoutButton1.Text = "Logout";
+            logoutButton1.TextColor = Color.White;
+            logoutButton1.UseVisualStyleBackColor = false;
             // 
             // CategoryAdminForm
             // 
@@ -415,11 +427,6 @@
             Name = "CategoryAdminForm";
             Text = "CategoryAdminForm";
             tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel2.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -427,6 +434,11 @@
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
+            tableLayoutPanel2.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
+            panel1.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -455,5 +467,6 @@
         private Panel panel4;
         private Panel panel5;
         private components.PictureBoxComponent1 pbProfile;
+        private FlowLayoutPanel flowLayoutPanelCategories;
     }
 }

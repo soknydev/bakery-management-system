@@ -51,6 +51,9 @@
             panel4 = new Panel();
             panel5 = new Panel();
             pbProfile = new components.PictureBoxComponent1();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            panel7 = new Panel();
+            flpProducts = new FlowLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel2.SuspendLayout();
@@ -63,6 +66,8 @@
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
+            tableLayoutPanel5.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -318,6 +323,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
+            tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(223, 3);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -373,6 +379,7 @@
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += BtnSearch_Click;
             // 
             // txtSearch
             // 
@@ -409,6 +416,40 @@
             pbProfile.TabIndex = 0;
             pbProfile.TabStop = false;
             // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            tableLayoutPanel5.Controls.Add(panel7, 0, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(3, 88);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel5.Size = new Size(1261, 675);
+            tableLayoutPanel5.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.White;
+            panel7.Controls.Add(flpProducts);
+            panel7.Dock = DockStyle.Fill;
+            panel7.Location = new Point(3, 3);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(1055, 669);
+            panel7.TabIndex = 0;
+            // 
+            // flpProducts
+            // 
+            flpProducts.AutoScroll = true;
+            flpProducts.Dock = DockStyle.Fill;
+            flpProducts.Location = new Point(0, 0);
+            flpProducts.Name = "flpProducts";
+            flpProducts.Size = new Size(1055, 669);
+            flpProducts.TabIndex = 0;
+            // 
             // DashboardAdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -430,6 +471,8 @@
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
+            tableLayoutPanel5.ResumeLayout(false);
+            panel7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -458,5 +501,8 @@
         private Label lblWelcome;
         private Button btnSearch;
         private TextBox txtSearch;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Panel panel7;
+        private FlowLayoutPanel flpProducts;
     }
 }

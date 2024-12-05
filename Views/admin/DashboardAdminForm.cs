@@ -1,12 +1,91 @@
 ﻿
+using bakery_management_system.components.userControl;
+using bakery_management_system.Controllers;
+using bakery_management_system.Models;
+using bakery_management_system.Utils;
+
 namespace bakery_management_system.Views.admin
 {
     public partial class DashboardAdminForm : Form
     {
+        private readonly ProductController _productController;
         public DashboardAdminForm()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            _productController = new ProductController();
+
+            // load products
+            LoadProducts();
+            // section user
+            UserInfo();
+        }
+
+        private void UserInfo()
+        {
+            // Section: User Information Display
+            if (UserSession.CurrentUser != null)
+            {
+                lblWelcome.Text = $"Hello, {UserSession.CurrentUser.Name}";
+                if (!string.IsNullOrEmpty(UserSession.CurrentUser.ImagePath) && File.Exists(UserSession.CurrentUser.ImagePath))
+                {
+                    pbProfile.Image = Image.FromFile(UserSession.CurrentUser.ImagePath);
+                }
+                else
+                {
+                    // defual avatar
+                    pbProfile.Image = Properties.Resources.photo_2023_08_01_20_25_42;
+                }
+            }
+            else
+            {
+                lblWelcome.Text = "Welcome, Guest!";
+                pbProfile.Image = Properties.Resources.photo_2023_08_01_20_25_42;
+            }
+
+        }
+
+        private void BtnSearch_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                string keyword = txtSearch.Text.Trim();
+                var filteredProducts = _productController.SearchProducts(keyword);
+
+                // Load filtered products
+                LoadProducts(filteredProducts);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error searching products: {ex.Message}");
+            }
+        }
+
+
+        private void LoadProducts(List<Product>? products = null)
+        {
+            try
+            {
+                // If no products are provided, load all available products
+                products ??= _productController.GetAvailableProducts();
+
+                // Clear existing controls
+                flpProducts.Controls.Clear();
+
+                foreach (var product in products)
+                {
+                    // Create and configure ProductControl
+                    var productControl = new ProductControl();
+                    productControl.SetProduct(product);
+
+                    // Add ProductControl to the FlowLayoutPanel
+                    flpProducts.Controls.Add(productControl);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading products: {ex.Message}");
+            }
         }
 
         private void btnCategories_Click(object sender, EventArgs e)

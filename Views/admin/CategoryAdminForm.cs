@@ -1,20 +1,106 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using bakery_management_system.components.userControl;
+using bakery_management_system.Controllers;
+using bakery_management_system.Utils;
 
 namespace bakery_management_system.Views.admin
 {
     public partial class CategoryAdminForm : Form
     {
+        private readonly CategoryController _categoryController;
+        private readonly ProductController _productController;
         public CategoryAdminForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+
+            _categoryController = new CategoryController();
+            _productController = new ProductController();
+            LoadCategory();
+
+            // user info.
+            UserInfo();
         }
+        private void LoadCategory()
+        {
+            // Fetch categories from the database
+            var categories = _categoryController.GetCategories();
+
+            // Dynamically add rows for each category
+            foreach (var category in categories)
+            {
+                var categoryControl = new CategoryControl();
+                categoryControl.LoadCategory(category.CategoryId, category.CategoryName);
+                flowLayoutPanelCategories.Controls.Add(categoryControl);
+            }
+        }
+
+        private void UserInfo()
+        {
+            // Section: User Information Display
+            if (UserSession.CurrentUser != null)
+            {
+                lblWelcome.Text = $"Hello, {UserSession.CurrentUser.Name}";
+                if (!string.IsNullOrEmpty(UserSession.CurrentUser.ImagePath) && File.Exists(UserSession.CurrentUser.ImagePath))
+                {
+                    pbProfile.Image = Image.FromFile(UserSession.CurrentUser.ImagePath);
+                }
+                else
+                {
+                    // defual avatar
+                    pbProfile.Image = Properties.Resources.photo_2023_08_01_20_25_42;
+                }
+            }
+            else
+            {
+                lblWelcome.Text = "Welcome, Guest!";
+                pbProfile.Image = Properties.Resources.photo_2023_08_01_20_25_42;
+            }
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string keyword = txtSearch.Text.Trim();
+
+                // Search products
+                var filteredProducts = _productController.SearchProducts(keyword);
+
+                // Search categories
+                var filteredCategories = _categoryController.SearchCategories(keyword);
+
+                // Clear existing controls
+                //flowLayoutPanelProducts.Controls.Clear();
+                flowLayoutPanelCategories.Controls.Clear();
+
+                // Load filtered products
+                foreach (var product in filteredProducts)
+                {
+                    var productControl = new ProductControl();
+                    productControl.SetProduct(product);
+                    //flowLayoutPanelProducts.Controls.Add(productControl);
+                }
+
+                // Load filtered categories
+                foreach (var category in filteredCategories)
+                {
+                    var categoryControl = new CategoryControl();
+                    categoryControl.LoadCategory(category.CategoryId, category.CategoryName);
+                    flowLayoutPanelCategories.Controls.Add(categoryControl);
+                }
+
+                if (!filteredProducts.Any() && !filteredCategories.Any())
+                {
+                    MessageBox.Show("No matching products or categories found.", "Search Results");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error searching: {ex.Message}");
+            }
+        }
+
+
     }
 }
