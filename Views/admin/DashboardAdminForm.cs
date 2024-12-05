@@ -123,6 +123,11 @@ namespace bakery_management_system.Views.admin
             this.Hide();
         }
 
+        private void btnAddProducts_Click(object sender, EventArgs e)
+        {
+            AddProductsForm addProductsForm = new AddProductsForm();
+            addProductsForm.Show();
 
+        }
     }
 }

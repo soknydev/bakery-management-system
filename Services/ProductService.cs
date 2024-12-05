@@ -1,11 +1,53 @@
 ﻿using bakery_management_system.Models;
 using bakery_management_system.Utils;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace bakery_management_system.Services
 {
     public class ProductService
     {
+        public bool AddProduct(Product product)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                string query = @"
+                    INSERT INTO Products (name, description, price, category_id, stock_level, image_path)
+                    VALUES (@name, @description, @price, @category_id, @stock_level, @image_path)";
+
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", product.Name);
+                    cmd.Parameters.AddWithValue("@description", product.Description);
+                    cmd.Parameters.AddWithValue("@price", product.Price);
+                    cmd.Parameters.AddWithValue("@category_id", product.CategoryId);
+                    cmd.Parameters.AddWithValue("@stock_level", product.StockLevel);
+                    cmd.Parameters.AddWithValue("@image_path", product.ImagePath);
+
+                    return cmd.ExecuteNonQuery() > 0; // Returns true if at least one row was inserted
+                }
+            }
+        }
+
+        public DataTable GetCategories()
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT category_id, category_name FROM Categories";
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    using (var adapter = new MySqlDataAdapter(cmd))
+                    {
+                        var table = new DataTable();
+                        adapter.Fill(table);
+                        return table;
+                    }
+                }
+            }
+        }
+
         public List<Product> GetAvailableProducts()
         {
             var products = new List<Product>();
@@ -79,40 +121,6 @@ namespace bakery_management_system.Services
             return products;
         }
 
-        // Fetch all categories
-        public List<Category> GetCategories()
-        {
-            var categories = new List<Category>();
-            string query = "SELECT category_id, name FROM Categories";
-
-            using (var connection = DatabaseHelper.GetConnection())
-            {
-                try
-                {
-                    connection.Open();
-                    using (var cmd = new MySqlCommand(query, connection))
-                    {
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                categories.Add(new Category
-                                {
-                                    CategoryId = reader.GetInt32("category_id"),
-                                    CategoryName = reader.GetString("name")
-                                });
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error fetching categories: {ex.Message}");
-                    throw;
-                }
-            }
-            return categories;
-        }
 
         // Filter products by category
         public List<Product> GetProductsByCategory(int categoryId)

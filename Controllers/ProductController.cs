@@ -1,5 +1,6 @@
 ﻿using bakery_management_system.Models;
 using bakery_management_system.Services;
+using System.Data;
 
 namespace bakery_management_system.Controllers
 {
@@ -10,6 +11,16 @@ namespace bakery_management_system.Controllers
         public ProductController()
         {
             _productService = new ProductService();
+        }
+
+        public DataTable GetCategories()
+        {
+            return _productService.GetCategories();
+        }
+
+        public bool AddProduct(Product product)
+        {
+            return _productService.AddProduct(product);
         }
 
         public List<Product> GetAvailableProducts()

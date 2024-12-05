@@ -101,7 +101,7 @@
             Controls.Add(lblProductName);
             Margin = new Padding(20);
             Name = "ProductControl";
-            Size = new Size(330, 373);
+            Size = new Size(316, 373);
             ((System.ComponentModel.ISupportInitialize)ptImage).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -54,6 +54,8 @@
             tableLayoutPanel5 = new TableLayoutPanel();
             panel7 = new Panel();
             flpProducts = new FlowLayoutPanel();
+            panel8 = new Panel();
+            btnAddProducts = new components.ButtonComponent1();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel2.SuspendLayout();
@@ -68,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
             tableLayoutPanel5.SuspendLayout();
             panel7.SuspendLayout();
+            panel8.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -423,6 +426,7 @@
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
             tableLayoutPanel5.Controls.Add(panel7, 0, 0);
+            tableLayoutPanel5.Controls.Add(panel8, 1, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
             tableLayoutPanel5.Location = new Point(3, 88);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -451,6 +455,36 @@
             flpProducts.Size = new Size(1055, 669);
             flpProducts.TabIndex = 0;
             // 
+            // panel8
+            // 
+            panel8.Controls.Add(btnAddProducts);
+            panel8.Dock = DockStyle.Fill;
+            panel8.Location = new Point(1064, 3);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(194, 669);
+            panel8.TabIndex = 1;
+            // 
+            // btnAddProducts
+            // 
+            btnAddProducts.BackColor = Color.FromArgb(255, 101, 0);
+            btnAddProducts.BackgroundColor = Color.FromArgb(255, 101, 0);
+            btnAddProducts.BorderColor = Color.PaleVioletRed;
+            btnAddProducts.BorderRadius = 10;
+            btnAddProducts.BorderSize = 0;
+            btnAddProducts.FlatAppearance.BorderSize = 0;
+            btnAddProducts.FlatStyle = FlatStyle.Flat;
+            btnAddProducts.Font = new Font("Segoe UI Semibold", 12F);
+            btnAddProducts.ForeColor = Color.White;
+            btnAddProducts.Location = new Point(3, 32);
+            btnAddProducts.Name = "btnAddProducts";
+            btnAddProducts.Padding = new Padding(15, 8, 15, 8);
+            btnAddProducts.Size = new Size(173, 50);
+            btnAddProducts.TabIndex = 2;
+            btnAddProducts.Text = "Add Products";
+            btnAddProducts.TextColor = Color.White;
+            btnAddProducts.UseVisualStyleBackColor = false;
+            btnAddProducts.Click += btnAddProducts_Click;
+            // 
             // DashboardAdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -474,6 +508,7 @@
             ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
             tableLayoutPanel5.ResumeLayout(false);
             panel7.ResumeLayout(false);
+            panel8.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -505,5 +540,7 @@
         private TableLayoutPanel tableLayoutPanel5;
         private Panel panel7;
         private FlowLayoutPanel flpProducts;
+        private Panel panel8;
+        private components.ButtonComponent1 btnAddProducts;
     }
 }
