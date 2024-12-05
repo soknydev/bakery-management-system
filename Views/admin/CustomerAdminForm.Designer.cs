@@ -30,6 +30,19 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel3 = new TableLayoutPanel();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            panel9 = new Panel();
+            tableLayoutPanel6 = new TableLayoutPanel();
+            flowLayoutPanelCustomers = new FlowLayoutPanel();
+            cartCustomerControl1 = new components.userControl.CartCustomerControl();
+            panel10 = new Panel();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            panel11 = new Panel();
+            btnAddCustomer = new components.ButtonComponent1();
             tableLayoutPanel4 = new TableLayoutPanel();
             panel6 = new Panel();
             lblWelcome = new Label();
@@ -53,6 +66,12 @@
             logoutButton1 = new components.LogoutButton();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
+            panel9.SuspendLayout();
+            tableLayoutPanel6.SuspendLayout();
+            flowLayoutPanelCustomers.SuspendLayout();
+            panel10.SuspendLayout();
+            panel11.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
@@ -78,7 +97,7 @@
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1469, 749);
+            tableLayoutPanel1.Size = new Size(1802, 749);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -86,6 +105,7 @@
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 0, 1);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(223, 3);
@@ -93,8 +113,167 @@
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 85F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            tableLayoutPanel3.Size = new Size(1243, 767);
+            tableLayoutPanel3.Size = new Size(1576, 767);
             tableLayoutPanel3.TabIndex = 2;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 220F));
+            tableLayoutPanel5.Controls.Add(panel9, 0, 0);
+            tableLayoutPanel5.Controls.Add(panel11, 1, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(3, 88);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Size = new Size(1658, 676);
+            tableLayoutPanel5.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(224, 224, 224);
+            panel9.Controls.Add(tableLayoutPanel6);
+            panel9.Dock = DockStyle.Fill;
+            panel9.Location = new Point(20, 20);
+            panel9.Margin = new Padding(20);
+            panel9.Name = "panel9";
+            panel9.Padding = new Padding(2);
+            panel9.Size = new Size(1398, 636);
+            panel9.TabIndex = 0;
+            // 
+            // tableLayoutPanel6
+            // 
+            tableLayoutPanel6.BackColor = Color.White;
+            tableLayoutPanel6.ColumnCount = 1;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.Controls.Add(flowLayoutPanelCustomers, 0, 1);
+            tableLayoutPanel6.Controls.Add(panel10, 0, 0);
+            tableLayoutPanel6.Dock = DockStyle.Fill;
+            tableLayoutPanel6.Location = new Point(2, 2);
+            tableLayoutPanel6.Margin = new Padding(4);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 2;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Size = new Size(1394, 632);
+            tableLayoutPanel6.TabIndex = 0;
+            // 
+            // flowLayoutPanelCustomers
+            // 
+            flowLayoutPanelCustomers.Controls.Add(cartCustomerControl1);
+            flowLayoutPanelCustomers.Dock = DockStyle.Fill;
+            flowLayoutPanelCustomers.Location = new Point(0, 65);
+            flowLayoutPanelCustomers.Margin = new Padding(0);
+            flowLayoutPanelCustomers.Name = "flowLayoutPanelCustomers";
+            flowLayoutPanelCustomers.Size = new Size(1394, 567);
+            flowLayoutPanelCustomers.TabIndex = 1;
+            // 
+            // cartCustomerControl1
+            // 
+            cartCustomerControl1.BackColor = SystemColors.Control;
+            cartCustomerControl1.Location = new Point(0, 0);
+            cartCustomerControl1.Margin = new Padding(0);
+            cartCustomerControl1.Name = "cartCustomerControl1";
+            cartCustomerControl1.Size = new Size(1784, 71);
+            cartCustomerControl1.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = Color.Gainsboro;
+            panel10.Controls.Add(label5);
+            panel10.Controls.Add(label4);
+            panel10.Controls.Add(label3);
+            panel10.Controls.Add(label2);
+            panel10.Controls.Add(label1);
+            panel10.Dock = DockStyle.Fill;
+            panel10.Location = new Point(0, 0);
+            panel10.Margin = new Padding(0);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(1394, 65);
+            panel10.TabIndex = 2;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(1217, 20);
+            label5.Name = "label5";
+            label5.Size = new Size(78, 28);
+            label5.TabIndex = 4;
+            label5.Text = "Update";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(837, 20);
+            label4.Name = "label4";
+            label4.Size = new Size(85, 28);
+            label4.TabIndex = 3;
+            label4.Text = "Address";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(540, 20);
+            label3.Name = "label3";
+            label3.Size = new Size(60, 28);
+            label3.TabIndex = 2;
+            label3.Text = "Email";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(299, 22);
+            label2.Name = "label2";
+            label2.Size = new Size(152, 28);
+            label2.TabIndex = 1;
+            label2.Text = "Phone Number";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(64, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(160, 28);
+            label1.TabIndex = 0;
+            label1.Text = "Customer Name";
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(btnAddCustomer);
+            panel11.Dock = DockStyle.Fill;
+            panel11.Location = new Point(1441, 3);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(214, 670);
+            panel11.TabIndex = 1;
+            // 
+            // btnAddCustomer
+            // 
+            btnAddCustomer.BackColor = Color.FromArgb(255, 101, 0);
+            btnAddCustomer.BackgroundColor = Color.FromArgb(255, 101, 0);
+            btnAddCustomer.BorderColor = Color.PaleVioletRed;
+            btnAddCustomer.BorderRadius = 10;
+            btnAddCustomer.BorderSize = 0;
+            btnAddCustomer.FlatAppearance.BorderSize = 0;
+            btnAddCustomer.FlatStyle = FlatStyle.Flat;
+            btnAddCustomer.Font = new Font("Segoe UI Semibold", 12F);
+            btnAddCustomer.ForeColor = Color.White;
+            btnAddCustomer.Location = new Point(14, 19);
+            btnAddCustomer.Name = "btnAddCustomer";
+            btnAddCustomer.Padding = new Padding(15, 8, 15, 8);
+            btnAddCustomer.Size = new Size(185, 50);
+            btnAddCustomer.TabIndex = 0;
+            btnAddCustomer.Text = "Add Customer";
+            btnAddCustomer.TextColor = Color.White;
+            btnAddCustomer.UseVisualStyleBackColor = false;
+            btnAddCustomer.Click += btnAddCustomer_Click;
             // 
             // tableLayoutPanel4
             // 
@@ -108,7 +287,7 @@
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle());
-            tableLayoutPanel4.Size = new Size(1261, 79);
+            tableLayoutPanel4.Size = new Size(1658, 79);
             tableLayoutPanel4.TabIndex = 0;
             // 
             // panel6
@@ -119,7 +298,7 @@
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 3);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1105, 76);
+            panel6.Size = new Size(1502, 76);
             panel6.TabIndex = 2;
             // 
             // lblWelcome
@@ -154,7 +333,7 @@
             // panel4
             // 
             panel4.Controls.Add(panel5);
-            panel4.Location = new Point(1114, 3);
+            panel4.Location = new Point(1511, 3);
             panel4.Name = "panel4";
             panel4.Size = new Size(144, 76);
             panel4.TabIndex = 0;
@@ -410,12 +589,19 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1469, 749);
+            ClientSize = new Size(1802, 749);
             Controls.Add(tableLayoutPanel1);
             Name = "CustomerAdminForm";
             Text = "CustomerAdminForm";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel5.ResumeLayout(false);
+            panel9.ResumeLayout(false);
+            tableLayoutPanel6.ResumeLayout(false);
+            flowLayoutPanelCustomers.ResumeLayout(false);
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel11.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
@@ -455,5 +641,18 @@
         private Panel panel1;
         private Panel panel3;
         private components.LogoutButton logoutButton1;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Panel panel9;
+        private TableLayoutPanel tableLayoutPanel6;
+        private FlowLayoutPanel flowLayoutPanelCustomers;
+        private components.userControl.CartCustomerControl cartCustomerControl1;
+        private Panel panel10;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Panel panel11;
+        private components.ButtonComponent1 btnAddCustomer;
     }
 }
