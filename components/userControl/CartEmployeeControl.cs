@@ -16,6 +16,7 @@ namespace bakery_management_system.components.userControl
             lblRole.Text = employee.Role;
             lblEmail.Text = employee.Email;
             lblPhone.Text = employee.Phone;
+            //pbEmployee.Image = Image.FromFile(employee.ImagePath);
 
             if (!string.IsNullOrEmpty(employee.ImagePath) && File.Exists(employee.ImagePath))
             {

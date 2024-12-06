@@ -10,6 +10,12 @@ namespace bakery_management_system.Utils
         private static string password = "1234Dev&&";       // Password
         private static int port = 3306;                     // MySQL port
 
+        /* private static string server = "34.126.93.142";
+         private static string database = "testdb";
+         private static string userId = "koko";
+         private static string password = "koko123";
+         private static int port = 5049;*/
+
         // Construct the connection string
         private static readonly string connectionString =
             $"Server={server};Port={port};Database={database};User Id={userId};Password={password};";
