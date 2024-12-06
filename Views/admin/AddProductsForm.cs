@@ -12,6 +12,7 @@ namespace bakery_management_system.Views.admin
         public AddProductsForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             _productController = new ProductController();
             LoadCategories();
         }
@@ -107,5 +108,13 @@ namespace bakery_management_system.Views.admin
             picProductImage.Image = null;
             _selectedImagePath = null;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            DashboardAdminForm form = new DashboardAdminForm();
+            form.Show();
+            this.Hide();
+        }
+
     }
 }

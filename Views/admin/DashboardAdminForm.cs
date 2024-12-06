@@ -127,7 +127,7 @@ namespace bakery_management_system.Views.admin
         {
             AddProductsForm addProductsForm = new AddProductsForm();
             addProductsForm.Show();
-
+            this.Hide();
         }
 
         private void logoutButton1_Click(object sender, EventArgs e)

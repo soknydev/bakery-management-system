@@ -1,5 +1,6 @@
 ﻿using bakery_management_system.Controllers;
 using bakery_management_system.Models;
+using bakery_management_system.Views.admin;
 
 namespace bakery_management_system.Views
 {
@@ -63,9 +64,9 @@ namespace bakery_management_system.Views
                     MessageBox.Show("User registered successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Navigate to the login form
-                    LoginForm loginForm = new LoginForm();
-                    loginForm.ShowDialog();
-                    this.Close();
+                    DashboardAdminForm adminForm = new DashboardAdminForm();
+                    adminForm.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -101,8 +102,11 @@ namespace bakery_management_system.Views
             this.Close();
         }
 
-
-
-
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            EmployeeAdminForm employeeAdminForm = new EmployeeAdminForm();
+            employeeAdminForm.Show();
+            this.Hide();
+        }
     }
 }

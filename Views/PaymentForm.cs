@@ -61,5 +61,10 @@ namespace bakery_management_system.Views
             // Confirm dialog result
             DialogResult = DialogResult.OK;
         }
+
+        private void cmbPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

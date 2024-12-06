@@ -30,6 +30,7 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            btnClose = new components.ButtonComponent2();
             btnRegister = new components.ButtonComponent1();
             txtSalary = new TextBox();
             txtGmail = new TextBox();
@@ -77,6 +78,7 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnClose);
             panel1.Controls.Add(btnRegister);
             panel1.Controls.Add(txtSalary);
             panel1.Controls.Add(txtGmail);
@@ -102,6 +104,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1494, 794);
             panel1.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            btnClose.BackColor = Color.FromArgb(126, 96, 191);
+            btnClose.BackgroundColor = Color.FromArgb(126, 96, 191);
+            btnClose.BorderColor = Color.PaleVioletRed;
+            btnClose.BorderRadius = 8;
+            btnClose.BorderSize = 0;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Segoe UI Semibold", 12F);
+            btnClose.ForeColor = Color.White;
+            btnClose.Location = new Point(763, 656);
+            btnClose.Name = "btnClose";
+            btnClose.Padding = new Padding(15, 8, 15, 8);
+            btnClose.Size = new Size(127, 54);
+            btnClose.TabIndex = 27;
+            btnClose.Text = "Close";
+            btnClose.TextColor = Color.White;
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // btnRegister
             // 
@@ -345,5 +368,6 @@
         private TextBox txtSalary;
         private TextBox txtGmail;
         private components.ButtonComponent1 btnRegister;
+        private components.ButtonComponent2 btnClose;
     }
 }
