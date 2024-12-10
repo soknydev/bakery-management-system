@@ -12,6 +12,14 @@ namespace bakery_management_system.Controllers
             _employeeService = new EmployeeService();
         }
 
+        // update employee
+        public bool UpdateEmployee(Employee employee)
+        {
+            return _employeeService.UpdateEmployee(employee);
+        }
+
+
+        // get all employees
         public List<Employee> GetEmployees()
         {
             return _employeeService.GetAllEmployees();

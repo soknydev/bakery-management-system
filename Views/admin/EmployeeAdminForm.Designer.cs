@@ -34,7 +34,6 @@
             panel9 = new Panel();
             tableLayoutPanel6 = new TableLayoutPanel();
             flowLayoutPanelEmployees = new FlowLayoutPanel();
-            cartEmployeeControl1 = new components.userControl.CartEmployeeControl();
             panel11 = new Panel();
             btnAddEmployee = new components.ButtonComponent1();
             tableLayoutPanel4 = new TableLayoutPanel();
@@ -58,6 +57,12 @@
             panel1 = new Panel();
             panel3 = new Panel();
             logoutButton1 = new components.LogoutButton();
+            panel7 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
@@ -74,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -142,7 +148,7 @@
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel6.Controls.Add(flowLayoutPanelEmployees, 0, 1);
-            tableLayoutPanel6.Controls.Add(cartEmployeeControl1, 0, 0);
+            tableLayoutPanel6.Controls.Add(panel7, 0, 0);
             tableLayoutPanel6.Dock = DockStyle.Fill;
             tableLayoutPanel6.Location = new Point(2, 2);
             tableLayoutPanel6.Margin = new Padding(4);
@@ -161,14 +167,6 @@
             flowLayoutPanelEmployees.Name = "flowLayoutPanelEmployees";
             flowLayoutPanelEmployees.Size = new Size(1394, 567);
             flowLayoutPanelEmployees.TabIndex = 1;
-            // 
-            // cartEmployeeControl1
-            // 
-            cartEmployeeControl1.BackColor = Color.Gainsboro;
-            cartEmployeeControl1.Location = new Point(3, 3);
-            cartEmployeeControl1.Name = "cartEmployeeControl1";
-            cartEmployeeControl1.Size = new Size(1388, 59);
-            cartEmployeeControl1.TabIndex = 2;
             // 
             // panel11
             // 
@@ -516,6 +514,70 @@
             logoutButton1.UseVisualStyleBackColor = false;
             logoutButton1.Click += logoutButton1_Click;
             // 
+            // panel7
+            // 
+            panel7.BackColor = Color.Gainsboro;
+            panel7.Controls.Add(label5);
+            panel7.Controls.Add(label4);
+            panel7.Controls.Add(label3);
+            panel7.Controls.Add(label2);
+            panel7.Controls.Add(label1);
+            panel7.Dock = DockStyle.Fill;
+            panel7.Location = new Point(3, 3);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(1388, 59);
+            panel7.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(42, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(155, 28);
+            label1.TabIndex = 0;
+            label1.Text = "Employee Name";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(274, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 28);
+            label2.TabIndex = 1;
+            label2.Text = "Role";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(553, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 28);
+            label3.TabIndex = 2;
+            label3.Text = "Email";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(851, 19);
+            label4.Name = "label4";
+            label4.Size = new Size(144, 28);
+            label4.TabIndex = 3;
+            label4.Text = "Phone Number";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(1126, 19);
+            label5.Name = "label5";
+            label5.Size = new Size(68, 28);
+            label5.TabIndex = 4;
+            label5.Text = "Profile";
+            // 
             // EmployeeAdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -541,6 +603,8 @@
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -575,6 +639,11 @@
         private FlowLayoutPanel flowLayoutPanelEmployees;
         private Panel panel11;
         private components.ButtonComponent1 btnAddEmployee;
-        private components.userControl.CartEmployeeControl cartEmployeeControl1;
+        private Panel panel7;
+        private Label label1;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
     }
 }

@@ -63,9 +63,8 @@ namespace bakery_management_system.Views
                 {
                     MessageBox.Show("User registered successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Navigate to the login form
-                    DashboardAdminForm adminForm = new DashboardAdminForm();
-                    adminForm.Show();
+                    EmployeeAdminForm employeeAdminForm = new EmployeeAdminForm();
+                    employeeAdminForm.Show();
                     this.Hide();
                 }
                 else

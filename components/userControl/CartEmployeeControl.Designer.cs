@@ -34,7 +34,10 @@
             lblEmail = new Label();
             lblPhone = new Label();
             pbEmployee = new PictureBox();
+            btnUpdate = new PictureBox();
+            lblUsername = new Label();
             ((System.ComponentModel.ISupportInitialize)pbEmployee).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnUpdate).BeginInit();
             SuspendLayout();
             // 
             // lblName
@@ -43,39 +46,39 @@
             lblName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblName.Location = new Point(42, 17);
             lblName.Name = "lblName";
-            lblName.Size = new Size(65, 28);
+            lblName.Size = new Size(64, 28);
             lblName.TabIndex = 0;
-            lblName.Text = "label1";
+            lblName.Text = "Name";
             // 
             // lblRole
             // 
             lblRole.AutoSize = true;
             lblRole.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRole.Location = new Point(273, 17);
+            lblRole.Location = new Point(478, 17);
             lblRole.Name = "lblRole";
-            lblRole.Size = new Size(65, 28);
+            lblRole.Size = new Size(50, 28);
             lblRole.TabIndex = 1;
-            lblRole.Text = "label1";
+            lblRole.Text = "Role";
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(558, 17);
+            lblEmail.Location = new Point(626, 17);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(65, 28);
+            lblEmail.Size = new Size(59, 28);
             lblEmail.TabIndex = 2;
-            lblEmail.Text = "label1";
+            lblEmail.Text = "Email";
             // 
             // lblPhone
             // 
             lblPhone.AutoSize = true;
             lblPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPhone.Location = new Point(850, 18);
+            lblPhone.Location = new Point(863, 17);
             lblPhone.Name = "lblPhone";
-            lblPhone.Size = new Size(65, 28);
+            lblPhone.Size = new Size(67, 28);
             lblPhone.TabIndex = 3;
-            lblPhone.Text = "label1";
+            lblPhone.Text = "Phone";
             // 
             // pbEmployee
             // 
@@ -87,10 +90,33 @@
             pbEmployee.TabIndex = 4;
             pbEmployee.TabStop = false;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.Image = Properties.Resources.edit;
+            btnUpdate.Location = new Point(1285, 17);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(49, 37);
+            btnUpdate.SizeMode = PictureBoxSizeMode.Zoom;
+            btnUpdate.TabIndex = 6;
+            btnUpdate.TabStop = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // lblUsername
+            // 
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsername.Location = new Point(296, 17);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(99, 28);
+            lblUsername.TabIndex = 7;
+            lblUsername.Text = "Username";
+            // 
             // CartEmployeeControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lblUsername);
+            Controls.Add(btnUpdate);
             Controls.Add(pbEmployee);
             Controls.Add(lblPhone);
             Controls.Add(lblEmail);
@@ -99,6 +125,7 @@
             Name = "CartEmployeeControl";
             Size = new Size(1765, 64);
             ((System.ComponentModel.ISupportInitialize)pbEmployee).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnUpdate).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -110,5 +137,7 @@
         private Label lblEmail;
         private Label lblPhone;
         private PictureBox pbEmployee;
+        private PictureBox btnUpdate;
+        private Label lblUsername;
     }
 }

@@ -132,7 +132,7 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(185, 34);
             txtUsername.TabIndex = 3;
-            txtUsername.Text = "Admin";
+            txtUsername.Text = "Sokny";
             // 
             // label2
             // 
