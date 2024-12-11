@@ -1,5 +1,4 @@
-﻿
-using bakery_management_system.components.userControl;
+﻿using bakery_management_system.components.userControl.admin;
 using bakery_management_system.Controllers;
 using bakery_management_system.Models;
 using bakery_management_system.Utils;
@@ -75,7 +74,7 @@ namespace bakery_management_system.Views.admin
                 foreach (var product in products)
                 {
                     // Create and configure ProductControl
-                    var productControl = new ProductControl();
+                    var productControl = new ProductAdminControl();
                     productControl.SetProduct(product);
 
                     // Add ProductControl to the FlowLayoutPanel

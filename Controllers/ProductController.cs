@@ -12,6 +12,15 @@ namespace bakery_management_system.Controllers
         {
             _productService = new ProductService();
         }
+        public bool UpdateProduct(Product product)
+        {
+            return _productService.UpdateProduct(product);
+        }
+
+        public bool DeleteProduct(int productId)
+        {
+            return _productService.DeleteProduct(productId);
+        }
 
         public DataTable GetCategories()
         {

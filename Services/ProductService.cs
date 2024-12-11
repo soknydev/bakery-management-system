@@ -7,6 +7,51 @@ namespace bakery_management_system.Services
 {
     public class ProductService
     {
+        public bool DeleteProduct(int productId)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                string query = "DELETE FROM Products WHERE product_id = @product_id";
+
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@product_id", productId);
+                    return cmd.ExecuteNonQuery() > 0; // Returns true if at least one row was deleted
+                }
+            }
+        }
+
+        public bool UpdateProduct(Product product)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                string query = @"
+            UPDATE Products
+            SET name = @name, 
+                description = @description, 
+                price = @price, 
+                category_id = @category_id, 
+                stock_level = @stock_level, 
+                image_path = @image_path
+            WHERE product_id = @product_id";
+
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", product.Name);
+                    cmd.Parameters.AddWithValue("@description", product.Description);
+                    cmd.Parameters.AddWithValue("@price", product.Price);
+                    cmd.Parameters.AddWithValue("@category_id", product.CategoryId);
+                    cmd.Parameters.AddWithValue("@stock_level", product.StockLevel);
+                    cmd.Parameters.AddWithValue("@image_path", product.ImagePath);
+                    cmd.Parameters.AddWithValue("@product_id", product.ProductId);
+
+                    return cmd.ExecuteNonQuery() > 0; // Returns true if at least one row was updated
+                }
+            }
+        }
+
         public bool AddProduct(Product product)
         {
             using (var conn = DatabaseHelper.GetConnection())

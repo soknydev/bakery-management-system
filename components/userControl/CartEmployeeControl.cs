@@ -1,6 +1,5 @@
 ﻿using bakery_management_system.Controllers;
 using bakery_management_system.Models;
-using bakery_management_system.Views.admin;
 
 namespace bakery_management_system.components.userControl
 {
@@ -40,8 +39,8 @@ namespace bakery_management_system.components.userControl
             if (_employee != null)
             {
                 // Open the UpdateEmployeeForm with the current employee
-                var updateForm = new UpdateEmployeeForm(_employee);
-                updateForm.ShowDialog();
+                //var updateForm = new UpdateEmployeeForm(_employee);
+                //updateForm.ShowDialog();
 
                 // Update the displayed employee data after the form closes
                 RefreshEmployeeData();

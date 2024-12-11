@@ -452,6 +452,7 @@
             flpProducts.AutoScroll = true;
             flpProducts.Dock = DockStyle.Fill;
             flpProducts.Location = new Point(0, 0);
+            flpProducts.Margin = new Padding(20);
             flpProducts.Name = "flpProducts";
             flpProducts.Size = new Size(1055, 669);
             flpProducts.TabIndex = 0;
