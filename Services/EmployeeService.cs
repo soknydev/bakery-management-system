@@ -6,6 +6,23 @@ namespace bakery_management_system.Services
 {
     public class EmployeeService
     {
+        // delete employee
+        public bool DeleteEmployee(int productId)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                string query = "DELETE FROM Employees WHERE employee_id = @employee_id";
+
+                using (var cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@employee_id", productId);
+                    return cmd.ExecuteNonQuery() > 0; // Returns true if at least one row was deleted
+                }
+            }
+        }
+
+
         //update employee
         public bool UpdateEmployee(Employee employee)
         {

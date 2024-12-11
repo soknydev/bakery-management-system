@@ -36,8 +36,10 @@
             pbEmployee = new PictureBox();
             btnUpdate = new PictureBox();
             lblUsername = new Label();
+            btnDelete = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pbEmployee).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnUpdate).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnDelete).BeginInit();
             SuspendLayout();
             // 
             // lblName
@@ -111,10 +113,22 @@
             lblUsername.TabIndex = 7;
             lblUsername.Text = "Username";
             // 
+            // btnDelete
+            // 
+            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
+            btnDelete.Location = new Point(1364, 17);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(49, 37);
+            btnDelete.SizeMode = PictureBoxSizeMode.Zoom;
+            btnDelete.TabIndex = 8;
+            btnDelete.TabStop = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // CartEmployeeControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnDelete);
             Controls.Add(lblUsername);
             Controls.Add(btnUpdate);
             Controls.Add(pbEmployee);
@@ -126,6 +140,7 @@
             Size = new Size(1765, 64);
             ((System.ComponentModel.ISupportInitialize)pbEmployee).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnUpdate).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnDelete).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,5 +154,6 @@
         private PictureBox pbEmployee;
         private PictureBox btnUpdate;
         private Label lblUsername;
+        private PictureBox btnDelete;
     }
 }

@@ -1,4 +1,5 @@
-﻿using bakery_management_system.Models;
+﻿using bakery_management_system.Controllers;
+using bakery_management_system.Models;
 using bakery_management_system.Views.admin;
 
 namespace bakery_management_system.components.userControl
@@ -72,6 +73,42 @@ namespace bakery_management_system.components.userControl
                     // Set default avatar if no image is found
                     pbEmployee.Image = Properties.Resources.photo_2023_08_01_20_25_42; // Replace with actual default image resource
                 }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (_employee != null)
+            {
+                var result = MessageBox.Show(
+                    $"Are you sure you want to delete {_employee.Name}?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    //Use EmployeeController to handle deletion
+                    var controller = new EmployeeController();
+                    bool isDeleted = controller.DeleteEmployee(_employee.EmployeeId);
+
+                    if (isDeleted)
+                    {
+                        MessageBox.Show("Employee deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Optionally, remove the control from its parent container
+                        this.Parent?.Controls.Remove(this);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete the employee.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No employee data available to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

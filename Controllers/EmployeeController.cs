@@ -12,6 +12,11 @@ namespace bakery_management_system.Controllers
             _employeeService = new EmployeeService();
         }
 
+        public bool DeleteEmployee(int employeeId)
+        {
+            return _employeeService.DeleteEmployee(employeeId);
+        }
+
         // update employee
         public bool UpdateEmployee(Employee employee)
         {
