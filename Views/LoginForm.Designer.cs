@@ -121,9 +121,9 @@
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(693, 347);
             label3.Name = "label3";
-            label3.Size = new Size(103, 28);
+            label3.Size = new Size(97, 28);
             label3.TabIndex = 4;
-            label3.Text = "Username:";
+            label3.Text = "Password:";
             // 
             // txtUsername
             // 
