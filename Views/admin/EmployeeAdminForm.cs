@@ -125,5 +125,10 @@ namespace bakery_management_system.Views.admin
                 this.Close();
             }
         }
+
+        private void cartEmployeeControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

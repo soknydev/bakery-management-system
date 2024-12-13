@@ -57,17 +57,20 @@
             panel1 = new Panel();
             panel3 = new Panel();
             logoutButton1 = new components.LogoutButton();
+            cartEmployeeControl1 = new components.userControl.CartEmployeeControl();
             panel7 = new Panel();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            label6 = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
             panel9.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
+            flowLayoutPanelEmployees.SuspendLayout();
             panel11.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             panel6.SuspendLayout();
@@ -161,6 +164,7 @@
             // 
             // flowLayoutPanelEmployees
             // 
+            flowLayoutPanelEmployees.Controls.Add(cartEmployeeControl1);
             flowLayoutPanelEmployees.Dock = DockStyle.Fill;
             flowLayoutPanelEmployees.Location = new Point(0, 65);
             flowLayoutPanelEmployees.Margin = new Padding(0);
@@ -514,9 +518,18 @@
             logoutButton1.UseVisualStyleBackColor = false;
             logoutButton1.Click += logoutButton1_Click;
             // 
+            // cartEmployeeControl1
+            // 
+            cartEmployeeControl1.Location = new Point(3, 3);
+            cartEmployeeControl1.Name = "cartEmployeeControl1";
+            cartEmployeeControl1.Size = new Size(2206, 80);
+            cartEmployeeControl1.TabIndex = 2;
+            cartEmployeeControl1.Load += cartEmployeeControl1_Load;
+            // 
             // panel7
             // 
             panel7.BackColor = Color.Gainsboro;
+            panel7.Controls.Add(label6);
             panel7.Controls.Add(label5);
             panel7.Controls.Add(label4);
             panel7.Controls.Add(label3);
@@ -531,52 +544,62 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(42, 19);
             label1.Name = "label1";
-            label1.Size = new Size(155, 28);
+            label1.Size = new Size(66, 28);
             label1.TabIndex = 0;
-            label1.Text = "Employee Name";
+            label1.Text = "Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(274, 19);
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(296, 19);
             label2.Name = "label2";
-            label2.Size = new Size(50, 28);
+            label2.Size = new Size(104, 28);
             label2.TabIndex = 1;
-            label2.Text = "Role";
+            label2.Text = "Username";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(553, 19);
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(475, 19);
             label3.Name = "label3";
-            label3.Size = new Size(59, 28);
+            label3.Size = new Size(51, 28);
             label3.TabIndex = 2;
-            label3.Text = "Email";
+            label3.Text = "Role";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(851, 19);
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(623, 19);
             label4.Name = "label4";
-            label4.Size = new Size(144, 28);
+            label4.Size = new Size(60, 28);
             label4.TabIndex = 3;
-            label4.Text = "Phone Number";
+            label4.Text = "Email";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(1126, 19);
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(860, 23);
             label5.Name = "label5";
-            label5.Size = new Size(68, 28);
+            label5.Size = new Size(71, 28);
             label5.TabIndex = 4;
-            label5.Text = "Profile";
+            label5.Text = "Phone";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(1128, 19);
+            label6.Name = "label6";
+            label6.Size = new Size(71, 28);
+            label6.TabIndex = 5;
+            label6.Text = "Profile";
             // 
             // EmployeeAdminForm
             // 
@@ -591,6 +614,7 @@
             tableLayoutPanel5.ResumeLayout(false);
             panel9.ResumeLayout(false);
             tableLayoutPanel6.ResumeLayout(false);
+            flowLayoutPanelEmployees.ResumeLayout(false);
             panel11.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -639,11 +663,13 @@
         private FlowLayoutPanel flowLayoutPanelEmployees;
         private Panel panel11;
         private components.ButtonComponent1 btnAddEmployee;
+        private components.userControl.CartEmployeeControl cartEmployeeControl1;
         private Panel panel7;
-        private Label label1;
+        private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
+        private Label label1;
     }
 }
